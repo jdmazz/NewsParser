@@ -18,10 +18,10 @@ public class FoxNews {
 			Element title = firstArticle.getElementsByTag("h1").first();
 			nd.setTitle(title.text());
 			Element body = firstArticle.getElementsByTag("article").first();
-	        Elements paragraphs = body.getElementsByTag("p");
-	        nd.setContent(JSHelp.toStrArr(paragraphs));
-	        Elements links = body.getElementsByTag("a");
-	        nd.setLinks(JSHelp.toStrPairs(links));
+	        	Elements paragraphs = body.getElementsByTag("p");
+	        	nd.setContent(JSHelp.toStrArr(paragraphs));
+	        	Elements links = body.getElementsByTag("a");
+	        	nd.setLinks(JSHelp.toStrPairs(links));
 			
 			NewsWriter nw = NewsWriter.getInstance();
 			try {
