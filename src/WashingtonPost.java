@@ -17,10 +17,10 @@ public class WashingtonPost {
 			Element title = firstArticle.getElementsByAttributeValue("data-pb-field", "customFields.web_headline").first();
 			nd.setTitle(title.text());
 			Element body = firstArticle.getElementsByTag("article").first();
-	        Elements paragraphs = body.getElementsByTag("p");
-	        nd.setContent(JSHelp.toStrArr(paragraphs));
-	        Elements links = body.getElementsByTag("a");
-	        nd.setLinks(JSHelp.toStrPairs(links));
+	        	Elements paragraphs = body.getElementsByTag("p");
+	        	nd.setContent(JSHelp.toStrArr(paragraphs));
+	        	Elements links = body.getElementsByTag("a");
+	        	nd.setLinks(JSHelp.toStrPairs(links));
 			
 			NewsWriter nw = NewsWriter.getInstance();
 			try {
